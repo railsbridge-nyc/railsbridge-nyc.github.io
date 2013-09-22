@@ -8,13 +8,16 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem "compass-rails", github: "milgner/compass-rails", ref: "1749c06f15dc4b058427e7969810457213647fb8"
+gem "compass-rails"
 gem 'haml'
 gem 'haml-rails'
-
+gem 'zurb-foundation', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
+gem 'quiet_assets'
+gem 'guard-livereload', require: false
+gem 'rack-livereload'
+gem 'rb-fsevent', require: false
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 

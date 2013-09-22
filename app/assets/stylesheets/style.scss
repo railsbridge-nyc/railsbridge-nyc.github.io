@@ -1,0 +1,17 @@
+section.main {
+	background: {
+		color: $cbg;
+	  image: image-url("hero-image.jpg");
+	  size: cover;
+	  repeat: no-repeat;
+	}
+	height: 600px;
+}
+section.get-involved {
+	background-color: green;
+	padding: 25px;
+}
+section.resources {
+	background-color: yellow;
+	padding: 25px;
+}
