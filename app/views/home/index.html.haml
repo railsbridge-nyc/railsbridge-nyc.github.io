@@ -14,45 +14,61 @@
       %li
         =link_to "Sponsors", root_path
 %section.main
+  %h1.logo RailsBridge NYC
+  .row.mailing-list
+    .large-5.columns.large-centered
+      %p Join our Mailing List to find out first when we announce our next workshop!
+      / Begin MailChimp Signup Form
+      #mc_embed_signup
+        %form#mc-embedded-subscribe-form.validate{action: "http://railsbridgenyc.us5.list-manage.com/subscribe/post?u=65c76a6873a0f359a5fd68cdd&id=2935a13527", method: "post", name: "mc-embedded-subscribe-form", novalidate: "", target: "_blank"}
+          %label{for: "mce-EMAIL", style: "display:none;"} Mailing List
+          %input.input-#mce-EMAIL.email{name: "EMAIL", placeholder: "email address", required: "", type: "email", value: ""}/
+          .clear
+            %input#mc-embedded-subscribe.button{name: "subscribe", type: "submit", value: "Subscribe"}/
+    %h1.ribbon.hide-for-small
+      .ribbon-title
+        Next Event:
+      %strong.ribbon-content
+        October 11th-12th, 2013
+%section.about
   .row
-    .large-6.columns
-    .large-6.columns
-      %aside
-        %section.about
-          / %h1 RailsBridge NYC
-          / %p
-          /   Railsbridge works to increase
-          /   diversity in tech by putting on awesome
-          /   free events.
-          / %p
-          /   We hold free 1.5 day Workshops in the New York City area to help women learn how to program their first websites in Ruby and Ruby on Rails.
-%section.get-involved
-  .row  
-    %h2 Get Involved
-    %p
-      Heard of RailsBridge and want to get involved? Great!
-      We have an active and passionate group of volunteers
-      and teachers who want to help you run the next
-      RailsBridge in NYC.
-      =link_to 'Join our Google Group', "https://groups.google.com/d/forum/railsbridge-nyc-org", target: "_blank" 
-      and introduce
-      yourself and what you'd like to contribute.
+    %h3
+      Railsbridge works to increase
+      diversity in tech by putting on awesome
+      free events.
+    %p 
+      - 0.upto(2) do
+        %i.icon-star
+    %h3
+      We hold free 1.5 day Workshops in the New York City area to help women learn how to program their first websites in Ruby and Ruby on Rails.
+
 %section.resources
   .row
-    %h2 Resources
-    %ul
-      %li
-        %a{href: "http://workshops.railsbridge.org/", target: "_blank"}
-          San
-          Francisco RailsBridge
-      %li
-        %a{href: "http://www.meetup.com/NYC-Ruby-Women/", target: "_blank"}
-          NYC
-          Ruby Women
-      %li
-        %a{href: "http://www.meetup.com/NYC-rb/", target: "_blank"} NYC.rb
-      %li
-        %a{href: "http://goruco.com/", target: "_blank"} GORUCO
+    .large-6.columns
+      %h2 Get Involved
+      %p
+        Heard of RailsBridge and want to get involved? Great!
+        We have an active and passionate group of volunteers
+        and teachers who want to help you run the next
+        RailsBridge in NYC.
+        =link_to 'Join our Google Group', "https://groups.google.com/d/forum/railsbridge-nyc-org", target: "_blank" 
+        and introduce
+        yourself and what you'd like to contribute.
+    .large-6.columns
+      %h2 Resources
+      %ul
+        %li
+          %a{href: "http://workshops.railsbridge.org/", target: "_blank"}
+            San
+            Francisco RailsBridge
+        %li
+          %a{href: "http://www.meetup.com/NYC-Ruby-Women/", target: "_blank"}
+            NYC
+            Ruby Women
+        %li
+          %a{href: "http://www.meetup.com/NYC-rb/", target: "_blank"} NYC.rb
+        %li
+          %a{href: "http://goruco.com/", target: "_blank"} GORUCO
 %section.sponsors
   .row
     %h2 Our Sponsors
@@ -101,21 +117,6 @@
     %br/
     CLOSED—Sign up to our mailing list for news
     about our upcoming workshop.
-%aside
-  %h3 Receive Email Updates
-  %p
-    Join our Mailing List to find out first when we
-    announce our next workshop!
-  / Begin MailChimp Signup Form
-  #mc_embed_signup
-    %form#mc-embedded-subscribe-form.validate{action: "http://railsbridgenyc.us5.list-manage.com/subscribe/post?u=65c76a6873a0f359a5fd68cdd&id=2935a13527", method: "post", name: "mc-embedded-subscribe-form", novalidate: "", target: "_blank"}
-      %label{for: "mce-EMAIL"} Subscribe to our mailing list
-      %input#mce-EMAIL.email{name: "EMAIL", placeholder: "email address", required: "", type: "email", value: ""}/
-      .clear
-        %input#mc-embedded-subscribe.button{name: "subscribe", type: "submit", value: "Subscribe"}/
-    / End mc_embed_signup
-/ #main
-/ #main-container
 
 %footer
   .row
@@ -127,8 +128,9 @@
       %h2 Contact
       %ul
         %li
-          Twitter:
-          %a{href: "https://twitter.com/RailsBridgeNYC/", target: "_blank"} @RailsBridgeNYC
+          = link_to 'https://twitter.com/RailsBridgeNYC/', target: "_blank" do
+            %i.icon-twitter
+            @RailsBridgeNYC
         %li
           Email:
           %a{href: "mailto:info@railsbridgenyc.org", target: "_blank"} info@railsbridgenyc.org

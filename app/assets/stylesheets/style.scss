@@ -1,5 +1,35 @@
 $ruby: #fe4f44;
 $teal: #58c3af;
+
+body {
+	border-top: 5px solid $teal;
+}
+
+ul li {
+	list-style-type: none;
+	line-height: 35px;
+}
+
+.ribbon-title {
+	font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.ribbon {
+  width: 50%;
+  font-size: 24px;
+  position: relative;
+  bottom: -46px;
+  background-color: lighten($ruby, 10%);
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  padding: 0.4em 2em 0.7em;
+  margin: 2em auto 3em;
+  border-radius: 5px;
+  border: 3px solid white;
+}
+
 section {
 	a {
 		color: lighten($ruby, 20%);
@@ -7,15 +37,21 @@ section {
 		border-bottom: 2px solid lighten($ruby, 20%);
 	}
 	color: white;
-	padding: 150px;
-	h2 {
+	padding: 80px 20px;
+	h1,h2, h3 {
 		color: white;
+	}
+	text-align: center;
+	@media #{$medium} {
+		padding: 150px;
 	}
 }
 p, li {
 	letter-spacing: 1px;
 }
 section.main {
+	z-index: 1;
+	padding: 30px;
 	background: {
 		color: white;
 	  image: image-url("hero-image.jpg");
@@ -23,15 +59,65 @@ section.main {
 	  position: center bottom;
 	  repeat: no-repeat;
 	}
-	height: 600px;
+	height: 500px;
+	@media #{$small} {
+		height: 600px;
+	}
 }
-.about {
-	position: relative;
-	bottom: 0;
+h1.logo {
+	background: {
+	  image: image-url("logo.png");
+	  repeat: no-repeat;
+	  size: contain;
+	  position: 50% 50%;
+	}
+	text-indent: -999999px;
+	display: block;
+	width: 100%;
+	height: 5em;
 }
-section.get-involved {
+.mailing-list {
+	margin-top: 1em;
+	input[type="email"] {
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		height: 2.7em;
+		font-size: 1em;
+		border-color: $ruby;
+		&:focus {
+			border-color: $teal;
+		}
+	}
+}
+.main {
+	color: $ruby;
+	h3 {
+		color: $ruby;	
+	}
+	.button {
+		border-radius: 5px;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset;	
+		background-color: $ruby;
+		border: none;
+		border-bottom: 4px solid darken($ruby, 20%); 
+		&:hover {
+		 background-color: darken($ruby, 25%); 
+		}		
+		width: 100% !important;
+	}
+}
+section.about {
+	z-index: 1;
 	border-top: 15px solid lighten($ruby, 20%);
 	background-color: $ruby;
+	h3 {
+		font-size: emCalc(17px);
+		font-weight: 400;
+		@media #{$medium} {
+			font-size: emCalc(25px);	
+		}
+	}
 	a {
 		&:hover {
 			color: complement($ruby);
@@ -53,10 +139,25 @@ section.resources {
 	}
 }
 section.sponsors {
-	border-top: 15px solid lighten($teal, 20%);
-	background-color: darken($teal, 20%);
+	border-top: 15px solid darken($teal, 10%);
+	background-color: darken($teal, 20%);	a {
+		color: lighten($teal, 20%);
+		border-bottom-color: lighten($teal, 20%);
+		&:hover {
+			color: darken($teal, 20%);
+			border-bottom-color: darken($teal, 20%);
+		}
+	}
 }
 footer {
 	background-color: black;
 	color: white;
+	i {
+		font-size: 25px;
+		color: $teal;
+	}
+	a {
+		border: none;
+		color: white;
+	}
 }
