@@ -234,3 +234,25 @@ footer {
 #event-info {
 	text-align: center;
 }
+
+.volunteer-page, .sponsors-page, .students-page {
+	text-align: left;
+}
+
+.volunteer-page, .sponsors-page {
+	border-top: 15px solid lighten($teal, 20%);
+	background-color: $teal;
+	a {
+		border-bottom: 2px solid white;
+		color: white;
+		&:hover {
+			color: lighten($teal, 20%);
+			border-bottom: 2px solid lighten($teal, 20%);
+		}
+	}
+}
+
+.students-page {
+	background-color: $ruby;
+	border-top: 15px solid lighten($ruby, 20%);
+}
