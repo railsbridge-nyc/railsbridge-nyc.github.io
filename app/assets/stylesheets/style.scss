@@ -1,17 +1,62 @@
+$ruby: #fe4f44;
+$teal: #58c3af;
+section {
+	a {
+		color: lighten($ruby, 20%);
+		padding-bottom: 3px;
+		border-bottom: 2px solid lighten($ruby, 20%);
+	}
+	color: white;
+	padding: 150px;
+	h2 {
+		color: white;
+	}
+}
+p, li {
+	letter-spacing: 1px;
+}
 section.main {
 	background: {
-		color: $cbg;
+		color: white;
 	  image: image-url("hero-image.jpg");
-	  size: cover;
+	  size: contain;
+	  position: center bottom;
 	  repeat: no-repeat;
 	}
 	height: 600px;
 }
-section.get-involved {
-	background-color: green;
-	padding: 25px;
+.about {
+	position: relative;
+	bottom: 0;
 }
+section.get-involved {
+	border-top: 15px solid lighten($ruby, 20%);
+	background-color: $ruby;
+	a {
+		&:hover {
+			color: complement($ruby);
+			border-bottom-color: complement($ruby);
+		}
+	}
+}
+
 section.resources {
-	background-color: yellow;
-	padding: 25px;
+	background-color: $teal;
+	border-top: 15px solid lighten($teal, 20%);
+	a {
+		color: lighten($teal, 20%);
+		border-bottom-color: lighten($teal, 20%);
+		&:hover {
+			color: darken($teal, 20%);
+			border-bottom-color: darken($teal, 20%);
+		}
+	}
+}
+section.sponsors {
+	border-top: 15px solid lighten($teal, 20%);
+	background-color: darken($teal, 20%);
+}
+footer {
+	background-color: black;
+	color: white;
 }

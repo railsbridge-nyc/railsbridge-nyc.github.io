@@ -5,7 +5,7 @@
     %li.toggle-topbar.menu-icon
       =link_to "#" do
         %span Menu
-  %section.top-bar-section
+  .top-bar-section
     %ul.right
       %li
         =link_to "Students", root_path
@@ -19,13 +19,13 @@
     .large-6.columns
       %aside
         %section.about
-          %h1 RailsBridge NYC
-          %p
-            We are an organization that works to increase
-            diversity in tech by putting on awesome
-            free events.
-          %p
-            We hold free 1.5 day Workshops in the New York City area to help women learn how to program their first websites in Ruby and Ruby on Rails.
+          / %h1 RailsBridge NYC
+          / %p
+          /   Railsbridge works to increase
+          /   diversity in tech by putting on awesome
+          /   free events.
+          / %p
+          /   We hold free 1.5 day Workshops in the New York City area to help women learn how to program their first websites in Ruby and Ruby on Rails.
 %section.get-involved
   .row  
     %h2 Get Involved
@@ -34,7 +34,7 @@
       We have an active and passionate group of volunteers
       and teachers who want to help you run the next
       RailsBridge in NYC.
-      %a{href: "https://groups.google.com/d/forum/railsbridge-nyc-org", target: "_blank"} Join our Google Group
+      =link_to 'Join our Google Group', "https://groups.google.com/d/forum/railsbridge-nyc-org", target: "_blank" 
       and introduce
       yourself and what you'd like to contribute.
 %section.resources
@@ -53,8 +53,8 @@
         %a{href: "http://www.meetup.com/NYC-rb/", target: "_blank"} NYC.rb
       %li
         %a{href: "http://goruco.com/", target: "_blank"} GORUCO
-%section
-  .row.sponsors
+%section.sponsors
+  .row
     %h2 Our Sponsors
     %p
       Thank you to the wonderful people and companies who
