@@ -25,11 +25,11 @@
           %input.input-#mce-EMAIL.email{name: "EMAIL", placeholder: "email address", required: "", type: "email", value: ""}/
           .clear
             %input#mc-embedded-subscribe.button{name: "subscribe", type: "submit", value: "Subscribe"}/
-    %h1.ribbon.hide-for-small
-      .ribbon-title
+    = link_to '#', class: 'hide-for-small ribbon', data: {reveal_id: "event-info", text: 'SIGN UP!'} do
+      %h1.ribbon-title
         Next Event:
-      %strong.ribbon-content
-        October 11th-12th, 2013
+      %h1.ribbon-content
+        %strong November 8th-9th, 2013
 %section.about
   .row
     %h3
@@ -81,9 +81,9 @@
       Thank you to the wonderful people and companies who
       have donated their time and money in our mission to
       teach underrepresented minorities in technology.
-      %a{href: "sponsors.html"}
-        Learn
-        more about how your company can help us through
+    %p
+      =link_to 'sponsors.html' do
+        Learn more about how your company can help us through
         sponsorship opportunities.
     %ul
       %li
@@ -96,39 +96,11 @@
         %a{href: "http://railsdog.com/"} RailsDog
       %li
         %a{href: "http://www.simonandschuster.com/"} Simon & Schuster
-%aside
-  %h3 Our Next Event
-  %p
-    %strong Installfest
-    %br/
-    Friday, October 11th 6:00PM-9:00PM
-    %br/
-    %strong Workshop
-    %br/
-    Saturday, October 12th 9:00AM-5:00PM
-  %p
-    %strong Location
-    %br/
-    Alley NYC
-    %br/
-    500 7th Avenue (at 37th Street)
-    %a{href: "https://maps.google.com/maps?ie=UTF-8&q=alley+nyc&fb=1&gl=us&hq=alley&hnear=0x89c24fa5d33f083b:0xc80b8f06e177fe62,New+York,+NY&cid=0,0,12900040414853858982&ei=lxMOUqDyNcjA2gW2hoCwCA&ved=0CJQBEPwSMAs"} (map)
-    %br/
-    Floor 17A
-    %br/
-    New York, NY 10018
-  %p
-    %strong Registration
-    %br/
-    CLOSED—Sign up to our mailing list for news
-    about our upcoming workshop.
-
 %footer
   %section.contact
     .row
       %p
         %a{href: "code-of-conduct.html"} Code of Conduct
-      %h2 Contact
       %ul
         %li
           = link_to 'https://twitter.com/RailsBridgeNYC/', target: "_blank" do
@@ -138,4 +110,9 @@
           = link_to 'mailto:info@railsbridgenyc.org' do
             %i.icon-envelope-alt 
             info@railsbridgenyc.org
-      %h3 © 2013 RailsBridge NYC
+        %li 
+          design & code: 
+          = link_to 'https://twitter.com/erinandcode' do
+            @erinandcode
+      %h4 © 2013 RailsBridge NYC
+= render 'modal'      

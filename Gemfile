@@ -8,7 +8,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem "compass-rails"
+gem "compass-rails", "~> 2.0.alpha.0"
 gem 'haml'
 gem 'haml-rails'
 gem 'zurb-foundation', '~> 4.0.0'

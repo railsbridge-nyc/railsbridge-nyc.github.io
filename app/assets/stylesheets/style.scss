@@ -1,5 +1,6 @@
 $ruby: #fe4f44;
 $teal: #58c3af;
+$highlight: #e8ae31;
 
 body {
 	border-top: 5px solid $teal;
@@ -16,18 +17,38 @@ ul li {
 }
 
 .ribbon {
-  width: 50%;
-  font-size: 24px;
+  width: 40%;
   position: relative;
-  bottom: -46px;
-  background-color: lighten($teal, 10%);
+  bottom: -55px;
+  background-color: $highlight;
   text-align: center;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   padding: 0.4em 2em 0.7em;
   margin: 2em auto 3em;
   border-radius: 5px;
   border: 3px solid white;
+  display: block;
+  overflow: hidden;
+  &:hover {
+	  background-color: $ruby;
+	  line-height: 9em;
+	    -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  }
+  &:before{
+    content: attr(data-text);
+    color: lighten($ruby, 20%);
+    font-weight: bold;
+    position: absolute;
+    top: -3.43em;
+    right: 3.55em;
+  }
+}
+.ribbon-content {
+  font-size: 24px;
 }
 
 section {
@@ -184,14 +205,15 @@ section.sponsors {
 	border-top: 15px solid darken($teal, 10%);
 	background-color: darken($teal, 20%);	a {
 		color: lighten($teal, 20%);
-		border-bottom-color: lighten($teal, 20%);
+		border-bottom: none;
 		&:hover {
 			color: white;
-			border-bottom-color: white;
+			border-bottom: none;
 		}
 	}
 }
 footer {
+	border-top: 15px solid #424141;
 	background-color: black;
 	color: white;
 	i {
@@ -201,5 +223,14 @@ footer {
 	a {
 		border: none;
 		color: white;
+		&:hover {
+			color: $teal;
+		}
 	}
+	h4 {
+		color: #424141;
+	}
+}
+#event-info {
+	text-align: center;
 }
