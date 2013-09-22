@@ -151,13 +151,14 @@ section.about {
 		}
 	}
 }
-
-section.get-involved {
-	background-color: white;
-	color: $ruby;
+section.get-involved, section.sponsors	{
 	p {
 		line-height: 2.6;
 	}
+}
+section.get-involved {
+	background-color: white;
+	color: $ruby;
 	h2, h3 {
 		color: $ruby;
 	}
@@ -237,6 +238,9 @@ footer {
 
 .volunteer-page, .sponsors-page, .students-page {
 	text-align: left;
+	p, dd {
+		letter-spacing: 1px;
+	}
 }
 
 .volunteer-page, .sponsors-page {
