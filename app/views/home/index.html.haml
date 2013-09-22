@@ -42,12 +42,16 @@
     %h3
       We hold free 1.5 day Workshops in the New York City area to help women learn how to program their first websites in Ruby and Ruby on Rails.
 
-%section.resources
+%section.get-involved
   .row
     .large-6.columns
       %h2 Get Involved
       %p
-        Heard of RailsBridge and want to get involved? Great!
+        Heard of 
+        %strong
+          RailsBridge
+        and want to get involved? Great!
+      %p
         We have an active and passionate group of volunteers
         and teachers who want to help you run the next
         RailsBridge in NYC.
@@ -55,20 +59,21 @@
         and introduce
         yourself and what you'd like to contribute.
     .large-6.columns
-      %h2 Resources
-      %ul
-        %li
-          %a{href: "http://workshops.railsbridge.org/", target: "_blank"}
-            San
-            Francisco RailsBridge
-        %li
-          %a{href: "http://www.meetup.com/NYC-Ruby-Women/", target: "_blank"}
-            NYC
-            Ruby Women
-        %li
-          %a{href: "http://www.meetup.com/NYC-rb/", target: "_blank"} NYC.rb
-        %li
-          %a{href: "http://goruco.com/", target: "_blank"} GORUCO
+      %section.resources
+        %h3 Resources:
+        %ul
+          %li
+            %a{href: "http://workshops.railsbridge.org/", target: "_blank"}
+              San
+              Francisco RailsBridge
+          %li
+            %a{href: "http://www.meetup.com/NYC-Ruby-Women/", target: "_blank"}
+              NYC
+              Ruby Women
+          %li
+            %a{href: "http://www.meetup.com/NYC-rb/", target: "_blank"} NYC.rb
+          %li
+            %a{href: "http://goruco.com/", target: "_blank"} GORUCO
 %section.sponsors
   .row
     %h2 Our Sponsors
@@ -119,12 +124,10 @@
     about our upcoming workshop.
 
 %footer
-  .row
-    %h3 © 2013 RailsBridge NYC
-    %p
-      %a{href: "code-of-conduct.html"} Code of Conduct
   %section.contact
     .row
+      %p
+        %a{href: "code-of-conduct.html"} Code of Conduct
       %h2 Contact
       %ul
         %li
@@ -132,5 +135,7 @@
             %i.icon-twitter
             @RailsBridgeNYC
         %li
-          Email:
-          %a{href: "mailto:info@railsbridgenyc.org", target: "_blank"} info@railsbridgenyc.org
+          = link_to 'mailto:info@railsbridgenyc.org' do
+            %i.icon-envelope-alt 
+            info@railsbridgenyc.org
+      %h3 © 2013 RailsBridge NYC

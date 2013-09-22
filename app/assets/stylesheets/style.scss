@@ -20,7 +20,7 @@ ul li {
   font-size: 24px;
   position: relative;
   bottom: -46px;
-  background-color: lighten($ruby, 10%);
+  background-color: lighten($teal, 10%);
   text-align: center;
   color: white;
   letter-spacing: 3px;
@@ -50,7 +50,6 @@ p, li {
 	letter-spacing: 1px;
 }
 section.main {
-	z-index: 1;
 	padding: 30px;
 	background: {
 		color: white;
@@ -108,9 +107,15 @@ h1.logo {
 	}
 }
 section.about {
-	z-index: 1;
-	border-top: 15px solid lighten($ruby, 20%);
-	background-color: $ruby;
+	background: {
+		color: $teal;
+	  image: image-url("about-railsbridge.jpg");
+	  repeat: no-repeat;
+	  size: cover;
+	  position: 50% 50%;
+	}
+	border-top: 15px solid $teal;
+	border-bottom: 15px solid $teal;
 	h3 {
 		font-size: emCalc(17px);
 		font-weight: 400;
@@ -126,16 +131,53 @@ section.about {
 	}
 }
 
-section.resources {
-	background-color: $teal;
-	border-top: 15px solid lighten($teal, 20%);
+section.get-involved {
+	background-color: white;
+	color: $ruby;
+	p {
+		line-height: 2.6;
+	}
+	h2, h3 {
+		color: $ruby;
+	}
 	a {
-		color: lighten($teal, 20%);
-		border-bottom-color: lighten($teal, 20%);
+		color: lighten($ruby, 20%);
+		border-bottom-color: lighten($ruby, 20%);
 		&:hover {
-			color: darken($teal, 20%);
-			border-bottom-color: darken($teal, 20%);
+			color: darken($ruby, 20%);
+			border-bottom-color: darken($ruby, 20%);
 		}
+	}
+}
+section.resources {
+	h3 {
+		text-shadow: 1px 2px 0 rgba(0,0,0,0.36); 
+	}
+	border: 3px solid $ruby;
+	padding: 15px 5px;
+	margin: 0 auto;
+	width: 100%;
+	@media #{$small} {
+		width: 70%;	
+	}
+	a {
+		font-weight: 500;
+		display: block;
+		color: black;
+		border-bottom: none;
+		padding: 15px;
+		&:hover {
+			background-color: darken($ruby, 20%);
+			color: white;
+			border-bottom: none;
+		}
+	}
+	background: {
+		color: white;
+	  image: image-url("resources-sidebar.jpg");
+	  size: cover;
+	  position: center bottom;
+	  repeat: no-repeat;
 	}
 }
 section.sponsors {
@@ -144,8 +186,8 @@ section.sponsors {
 		color: lighten($teal, 20%);
 		border-bottom-color: lighten($teal, 20%);
 		&:hover {
-			color: darken($teal, 20%);
-			border-bottom-color: darken($teal, 20%);
+			color: white;
+			border-bottom-color: white;
 		}
 	}
 }
