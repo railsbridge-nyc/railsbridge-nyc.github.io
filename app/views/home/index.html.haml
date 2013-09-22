@@ -1,18 +1,3 @@
-%nav.top-bar
-  %ul.title-area
-    %li.name 
-      %h1=link_to "RailsBridge NYC", root_path
-    %li.toggle-topbar.menu-icon
-      =link_to "#" do
-        %span Menu
-  .top-bar-section
-    %ul.right
-      %li
-        =link_to "Students", root_path
-      %li
-        =link_to "Volunteers", root_path
-      %li
-        =link_to "Sponsors", root_path
 %section.main
   %h1.logo RailsBridge NYC
   .row.mailing-list
@@ -96,23 +81,4 @@
         %a{href: "http://railsdog.com/"} RailsDog
       %li
         %a{href: "http://www.simonandschuster.com/"} Simon & Schuster
-%footer
-  %section.contact
-    .row
-      %p
-        %a{href: "code-of-conduct.html"} Code of Conduct
-      %ul
-        %li
-          = link_to 'https://twitter.com/RailsBridgeNYC/', target: "_blank" do
-            %i.icon-twitter
-            @RailsBridgeNYC
-        %li
-          = link_to 'mailto:info@railsbridgenyc.org' do
-            %i.icon-envelope-alt 
-            info@railsbridgenyc.org
-        %li 
-          design & code: 
-          = link_to 'https://twitter.com/erinandcode' do
-            @erinandcode
-      %h4 © 2013 RailsBridge NYC
 = render 'modal'      
