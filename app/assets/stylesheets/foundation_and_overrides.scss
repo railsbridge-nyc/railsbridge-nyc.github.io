@@ -987,6 +987,8 @@ $topbar-title-font-size: emCalc(20px);
 $topbar-link-color: #58c3af;
 $topbar-link-weight: normal;
 $topbar-link-font-size: emCalc(20px);
+$topbar-link-bg-hover: #fe4f44;
+$topbar-link-bg-active: darken($topbar-bg, 3%);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
@@ -1006,7 +1008,7 @@ $topbar-menu-icon-color: #58c3af;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
+$topbar-transition-speed: 600ms;
 // $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 

@@ -11,6 +11,11 @@ ul li {
 	line-height: 35px;
 }
 
+.top-bar-section li a:not(.button):hover {
+	background: $ruby !important;
+	color: white !important;
+}
+
 .ribbon-title {
 	font-size: 12px;
   letter-spacing: 1px;
