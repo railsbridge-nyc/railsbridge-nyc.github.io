@@ -218,7 +218,7 @@ section.sponsors {
 		}
 	}
 }
-footer {
+footer, .code-conduct {
 	border-top: 15px solid #424141;
 	background-color: black;
 	color: white;
@@ -237,6 +237,11 @@ footer {
 		color: #424141;
 	}
 }
+
+.code-conduct {
+	text-align: left;
+}
+
 #event-info {
 	text-align: center;
 }
