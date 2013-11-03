@@ -1,0 +1,272 @@
+$ruby: #fe4f44;
+$teal: #58c3af;
+$highlight: #e8ae31;
+
+body {
+	border-top: 5px solid $teal;
+}
+
+ul li {
+	list-style-type: none;
+	line-height: 35px;
+}
+
+.top-bar-section li a:not(.button):hover {
+	background: $ruby !important;
+	color: white !important;
+}
+
+.ribbon-title {
+	font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.ribbon {
+  width: 40%;
+  position: relative;
+  bottom: -55px;
+  background-color: $highlight;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+  padding: 0.4em 2em 0.7em;
+  margin: 2em auto 3em;
+  border-radius: 5px;
+  border: 3px solid white;
+  display: block;
+  overflow: hidden;
+  &:hover {
+	  background-color: $ruby;
+	  line-height: 9em;
+    -webkit-transition: all 0.5s ease-in-out;
+	  -moz-transition: all 0.5s ease-in-out;
+	  -o-transition: all 0.5s ease-in-out;
+	  transition: all 0.5s ease-in-out;
+  }
+  &:before{
+    content: attr(data-text);
+    color: lighten($ruby, 20%);
+    font-weight: bold;
+    position: absolute;
+    top: -3.43em;
+    right: 3.55em;
+  }
+}
+.ribbon-content {
+  font-size: 24px;
+}
+
+section {
+	a {
+		color: lighten($ruby, 20%);
+		padding-bottom: 3px;
+		border-bottom: 2px solid lighten($ruby, 20%);
+	}
+	color: white;
+	padding: 80px 20px;
+	h1,h2, h3 {
+		color: white;
+	}
+	text-align: center;
+	@media #{$medium} {
+		padding: 150px;
+	}
+}
+p, li {
+	letter-spacing: 1px;
+}
+section.main {
+	padding: 30px;
+	background: {
+		color: white;
+	  image: image-url("hero-image.jpg");
+	  size: contain;
+	  position: center bottom;
+	  repeat: no-repeat;
+	}
+	height: 500px;
+	@media #{$small} {
+		height: 600px;
+	}
+}
+h1.logo {
+	background: {
+	  image: image-url("logo.png");
+	  repeat: no-repeat;
+	  size: contain;
+	  position: 50% 50%;
+	}
+	text-indent: -999999px;
+	display: block;
+	width: 100%;
+	height: 5em;
+}
+.mailing-list {
+	margin-top: 1em;
+	input[type="email"] {
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		height: 2.7em;
+		font-size: 1em;
+		border-color: $ruby;
+		&:focus {
+			border-color: $teal;
+		}
+	}
+}
+.main {
+	color: $ruby;
+	h3 {
+		color: $ruby;	
+	}
+	.button {
+		border-radius: 5px;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset;	
+		background-color: $ruby;
+		border: none;
+		border-bottom: 4px solid darken($ruby, 20%); 
+		&:hover {
+		 background-color: darken($ruby, 25%); 
+		}		
+		width: 100% !important;
+	}
+}
+section.about {
+	background: {
+		color: $teal;
+	  image: image-url("about-railsbridge.jpg");
+	  repeat: no-repeat;
+	  size: cover;
+	  position: 50% 50%;
+	}
+	border-top: 15px solid $teal;
+	border-bottom: 15px solid $teal;
+	h3 {
+		font-size: emCalc(17px);
+		font-weight: 400;
+		@media #{$medium} {
+			font-size: emCalc(25px);	
+		}
+	}
+	a {
+		&:hover {
+			color: complement($ruby);
+			border-bottom-color: complement($ruby);
+		}
+	}
+}
+section.get-involved, section.sponsors	{
+	p {
+		line-height: 2.6;
+	}
+}
+section.get-involved {
+	background-color: white;
+	color: $ruby;
+	h2, h3 {
+		color: $ruby;
+	}
+	a {
+		color: lighten($ruby, 20%);
+		border-bottom-color: lighten($ruby, 20%);
+		&:hover {
+			color: darken($ruby, 20%);
+			border-bottom-color: darken($ruby, 20%);
+		}
+	}
+}
+section.resources {
+	h3 {
+		text-shadow: 1px 2px 0 rgba(0,0,0,0.36); 
+	}
+	border: 3px solid $ruby;
+	padding: 15px 5px;
+	margin: 0 auto;
+	width: 100%;
+	@media #{$small} {
+		width: 70%;	
+	}
+	a {
+		font-weight: 500;
+		display: block;
+		color: black;
+		border-bottom: none;
+		padding: 15px;
+		&:hover {
+			background-color: darken($ruby, 20%);
+			color: white;
+			border-bottom: none;
+		}
+	}
+	background: {
+		color: white;
+	  image: image-url("resources-sidebar.jpg");
+	  size: cover;
+	  position: center bottom;
+	  repeat: no-repeat;
+	}
+}
+section.sponsors {
+	border-top: 15px solid darken($teal, 10%);
+	background-color: darken($teal, 20%);	a {
+		color: lighten($teal, 20%);
+		border-bottom: none;
+		&:hover {
+			color: white;
+			border-bottom: none;
+		}
+	}
+}
+footer, .code-conduct {
+	border-top: 15px solid #424141;
+	background-color: black;
+	color: white;
+	i {
+		font-size: 25px;
+		color: $teal;
+	}
+	a {
+		border: none;
+		color: white;
+		&:hover {
+			color: $teal;
+		}
+	}
+	h4 {
+		color: #424141;
+	}
+}
+
+.code-conduct {
+	text-align: left;
+}
+
+#event-info {
+	text-align: center;
+}
+
+.volunteer-page, .sponsors-page, .students-page {
+	text-align: left;
+	p, dd, dt {
+		letter-spacing: 1px;
+	}
+}
+
+.volunteer-page, .sponsors-page {
+	border-top: 15px solid lighten($teal, 20%);
+	background-color: $teal;
+	a {
+		border-bottom: 2px solid white;
+		color: white;
+		&:hover {
+			color: lighten($teal, 20%);
+			border-bottom: 2px solid lighten($teal, 20%);
+		}
+	}
+}
+
+.students-page {
+	background-color: $ruby;
+	border-top: 15px solid lighten($ruby, 20%);
+}
