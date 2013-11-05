@@ -2,7 +2,7 @@
   %h1.logo RailsBridge NYC
   .row.mailing-list
     .large-5.columns.large-centered
-      %p Join our Mailing List to find out first when we announce our next workshop!
+      %p Join our Mailing List to find out first about our next workshop!
       / Begin MailChimp Signup Form
       #mc_embed_signup
         %form#mc-embedded-subscribe-form.validate{action: "http://railsbridgenyc.us5.list-manage.com/subscribe/post?u=65c76a6873a0f359a5fd68cdd&id=2935a13527", method: "post", name: "mc-embedded-subscribe-form", novalidate: "", target: "_blank"}
@@ -10,7 +10,7 @@
           %input.input-#mce-EMAIL.email{name: "EMAIL", placeholder: "email address", required: "", type: "email", value: ""}/
           .clear
             %input#mc-embedded-subscribe.button{name: "subscribe", type: "submit", value: "Subscribe"}/
-    = link_to '#', class: 'hide-for-small ribbon', data: {reveal_id: "event-info", text: 'SIGN UP!'} do
+    = link_to 'http://www.bridgetroll.org/events/68', class: 'hide-for-small ribbon', data: {reveal_id: "event-info", text: 'SIGN UP!'} do
       %h1.ribbon-title
         Next Event:
       %h1.ribbon-content
@@ -21,7 +21,7 @@
       Railsbridge works to increase
       diversity in tech by putting on awesome
       free events.
-    %p 
+    %p
       - 0.upto(2) do
         %i.icon-star
     %h3
@@ -32,7 +32,7 @@
     .large-6.columns
       %h2 Get Involved
       %p
-        Heard of 
+        Heard of
         %strong
           RailsBridge
         and want to get involved? Great!
@@ -73,13 +73,27 @@
         sponsorship opportunities.
     %ul
       %li
-        %a{href: "http://www.microoffice.com/"} MicroOffice
+        %a{href: "http://github.com/"} GitHub
       %li
-        %a{href: "http://www.neo.com/"} Neo
+        %a{href: "http://generalassemb.ly/"} General Assembly
+      %li
+        %a{href: "http://hackerhours.org/"} Hacker Hours
+      %li
+        %a{href: "http://www.handybook.com/"} Handybook
+      %li
+        %a{href: "http://grubhub.com/"} GrubHub
+      %li
+        %a{href: "http://gilt.com/"} Gilt
+      %li
+        %a{href: "http://neo.com/"} Neo
+      %li
+        %a{href: "http://nycdevshop.com//"} NYC Dev Shop
       %li
         %a{href: "http://pivotallabs.com/"} Pivotal Labs
       %li
-        %a{href: "http://railsdog.com/"} RailsDog
+        %a{href: "http://seamless.com/"} Seamless
       %li
-        %a{href: "http://www.simonandschuster.com/"} Simon & Schuster
-= render 'modal'      
+        %a{href: "http://simonandschuster.com/"} Simon & Schuster
+      %li
+        %a{href: "http://rgenerator.com/"} Sony DADC/rGenerator
+= render 'modal'
