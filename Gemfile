@@ -16,7 +16,7 @@ end
 gem "high_voltage"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem "compass-rails", "~> 2.0.alpha.0"
+gem "compass-rails", "~> 1.1.7"
 gem 'haml'
 gem 'haml-rails'
 gem 'zurb-foundation', '~> 4.0.0'
@@ -57,5 +57,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'rails_12factor', group: :production
