@@ -16,7 +16,7 @@ end
 gem "high_voltage"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem "compass-rails", "~> 1.1.7"
+gem "compass-rails"
 gem 'haml'
 gem 'haml-rails'
 gem 'zurb-foundation', '~> 4.0.0'
