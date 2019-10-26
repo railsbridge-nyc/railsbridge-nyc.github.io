@@ -1,5 +1,8 @@
 title: Railsbridge NYC
 
+plugins:
+  - jekyll-redirect-from
+
 exclude:
   - Gemfile
   - Gemfile.lock
