@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.2.5'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4'
 
 group :development, :test do
   gem 'sqlite3'
@@ -16,12 +16,12 @@ end
 
 gem "high_voltage"
 # Use SCSS for stylesheets
-gem 'sass', '~> 3.3.13'
-gem 'sass-rails', '~> 4.0.0'
-gem "compass-rails", "~> 1.1.7"
+gem 'sass', '~> 3'
+gem 'sass-rails', '~> 4'
+gem "compass-rails", "~> 1"
 gem 'haml'
 gem 'haml-rails'
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'zurb-foundation', '~> 4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'quiet_assets'
@@ -29,7 +29,7 @@ gem 'guard-livereload', require: false
 gem 'rack-livereload'
 gem 'rb-fsevent', require: false
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
