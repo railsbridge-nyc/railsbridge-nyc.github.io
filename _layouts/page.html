@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  {% if page.title %}
+  <title>{{ site.title }} - {{ page.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  {% include nav.html %}
+  {{ content }}
+  {% include footer.html %}
+
+  <script src='/js/vendor/custom.modernizr.js'></script>
+  <script src='/js/vendor/jquery.js'></script>
+  <script src='/js/vendor/foundation.js'></script>
+  <script src='/js/app.js'></script>
+</body>
+</html>
+
